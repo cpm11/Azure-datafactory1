@@ -32,6 +32,9 @@
 		"storing athelets_properties_typeProperties_url": {
 			"value": "https://databdataftrial.dfs.core.windows.net/"
 		},
+		"eventtrigger_properties_typeProperties_scope": {
+			"value": "/subscriptions/e6485c3d-285f-44b3-8a53-883ad655ff56/resourceGroups/dp900trial/providers/Microsoft.Storage/storageAccounts/databdataftrial"
+		},
 		"containerUri": {
 			"value": ""
 		},
