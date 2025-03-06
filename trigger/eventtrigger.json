@@ -13,7 +13,7 @@
 		],
 		"type": "BlobEventsTrigger",
 		"typeProperties": {
-			"blobPathBeginsWith": "/rejected/blobs/rejected",
+			"blobPathBeginsWith": "/gold/blobs/eventtrig/Fact_Sales_1.csv",
 			"ignoreEmptyBlobs": true,
 			"scope": "/subscriptions/e6485c3d-285f-44b3-8a53-883ad655ff56/resourceGroups/dp900trial/providers/Microsoft.Storage/storageAccounts/databdataftrial",
 			"events": [
