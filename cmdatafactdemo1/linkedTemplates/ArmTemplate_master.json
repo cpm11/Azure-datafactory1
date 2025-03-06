@@ -1,0 +1,105 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "cmdatafactdemo1"
+		},
+		"Connectiontostorageaccount_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'Connectiontostorageaccount'"
+		},
+		"connectazsql_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'connectazsql'"
+		},
+		"storing athelets_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'storing athelets'"
+		},
+		"Connectiontostorageaccount_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://databdataftrial.dfs.core.windows.net/"
+		},
+		"connectazsql_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "datafactorytrial.database.windows.net"
+		},
+		"connectazsql_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "datafactorydemo"
+		},
+		"connectazsql_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "chinmay"
+		},
+		"gitlink_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/"
+		},
+		"storing athelets_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://databdataftrial.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "cmdatafactdemo1_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"Connectiontostorageaccount_accountKey": {
+						"value": "[parameters('Connectiontostorageaccount_accountKey')]"
+					},
+					"connectazsql_password": {
+						"value": "[parameters('connectazsql_password')]"
+					},
+					"storing athelets_accountKey": {
+						"value": "[parameters('storing athelets_accountKey')]"
+					},
+					"Connectiontostorageaccount_properties_typeProperties_url": {
+						"value": "[parameters('Connectiontostorageaccount_properties_typeProperties_url')]"
+					},
+					"connectazsql_properties_typeProperties_server": {
+						"value": "[parameters('connectazsql_properties_typeProperties_server')]"
+					},
+					"connectazsql_properties_typeProperties_database": {
+						"value": "[parameters('connectazsql_properties_typeProperties_database')]"
+					},
+					"connectazsql_properties_typeProperties_userName": {
+						"value": "[parameters('connectazsql_properties_typeProperties_userName')]"
+					},
+					"gitlink_properties_typeProperties_url": {
+						"value": "[parameters('gitlink_properties_typeProperties_url')]"
+					},
+					"storing athelets_properties_typeProperties_url": {
+						"value": "[parameters('storing athelets_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

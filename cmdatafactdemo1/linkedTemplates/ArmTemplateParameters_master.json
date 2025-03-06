@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "cmdatafactdemo1"
+		},
+		"Connectiontostorageaccount_accountKey": {
+			"value": ""
+		},
+		"connectazsql_password": {
+			"value": ""
+		},
+		"storing athelets_accountKey": {
+			"value": ""
+		},
+		"Connectiontostorageaccount_properties_typeProperties_url": {
+			"value": "https://databdataftrial.dfs.core.windows.net/"
+		},
+		"connectazsql_properties_typeProperties_server": {
+			"value": "datafactorytrial.database.windows.net"
+		},
+		"connectazsql_properties_typeProperties_database": {
+			"value": "datafactorydemo"
+		},
+		"connectazsql_properties_typeProperties_userName": {
+			"value": "chinmay"
+		},
+		"gitlink_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/"
+		},
+		"storing athelets_properties_typeProperties_url": {
+			"value": "https://databdataftrial.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
