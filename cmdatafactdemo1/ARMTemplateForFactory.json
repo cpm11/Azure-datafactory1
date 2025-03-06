@@ -1021,7 +1021,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/Firsttrigger')]",
+			"name": "[concat(parameters('factoryName'), '/trigger1')]",
 			"type": "Microsoft.DataFactory/factories/triggers",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -1040,9 +1040,9 @@
 				"typeProperties": {
 					"recurrence": {
 						"frequency": "Minute",
-						"interval": 15,
-						"startTime": "2025-03-07T20:35:00",
-						"endTime": "2025-03-09T21:00:00",
+						"interval": 5,
+						"startTime": "2025-03-06T21:05:00",
+						"endTime": "2025-03-06T21:30:00",
 						"timeZone": "India Standard Time"
 					}
 				}
