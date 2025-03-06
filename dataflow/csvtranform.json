@@ -13,7 +13,15 @@
 					"name": "csvsource"
 				}
 			],
-			"sinks": [],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "dataflowoutput",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
 			"transformations": [
 				{
 					"name": "columnselect"
@@ -63,7 +71,26 @@
 				"     payment == \"americanexpress\",",
 				"     disjoint: false) ~> Paymentbasedsplit@(visa, mastercard, americanexpress)",
 				"Paymentbasedsplit@visa aggregate(groupBy(customer_id),",
-				"     {number of transactions} = count(transaction_id)) ~> customerid"
+				"     {number of transactions} = count(transaction_id)) ~> customerid",
+				"customerid sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     input(",
+				"          transaction_id as string,",
+				"          transactional_date as string,",
+				"          product_id as string,",
+				"          customer_id as string,",
+				"          payment as string,",
+				"          credit_card as string,",
+				"          loyalty_card as string,",
+				"          cost as string,",
+				"          quantity as string,",
+				"          price as string",
+				"     ),",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink1"
 			]
 		}
 	}
