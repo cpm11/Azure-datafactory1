@@ -1,0 +1,9 @@
+{
+	"name": "cmdatafactdemo1",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "7285386d-ca12-475c-baae-d855821e257d",
+		"tenantId": "06bb1238-f51d-4f2a-849e-c7e563b8aeb1"
+	}
+}
