@@ -736,8 +736,8 @@
 					"location": {
 						"type": "AzureBlobFSLocation",
 						"fileName": "Fact_Sales_1.csv",
-						"folderPath": "anshlambagit/Azure-Data-Factory/refs/heads/main/Raw Data",
-						"fileSystem": "bronze"
+						"folderPath": "eventtrig",
+						"fileSystem": "gold"
 					},
 					"columnDelimiter": ",",
 					"escapeChar": "\\",
@@ -1106,7 +1106,7 @@
 				],
 				"type": "BlobEventsTrigger",
 				"typeProperties": {
-					"blobPathBeginsWith": "/rejected/blobs/rejected",
+					"blobPathBeginsWith": "/gold/blobs/eventtrig/Fact_Sales_1.csv",
 					"ignoreEmptyBlobs": true,
 					"scope": "[parameters('eventtrigger_properties_typeProperties_scope')]",
 					"events": [
