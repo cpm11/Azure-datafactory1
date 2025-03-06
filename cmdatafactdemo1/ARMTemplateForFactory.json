@@ -735,7 +735,7 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
-						"fileName": "Fact_Sales_1.csv",
+						"fileName": "cars.csv",
 						"folderPath": "eventtrig",
 						"fileSystem": "gold"
 					},
@@ -1106,7 +1106,7 @@
 				],
 				"type": "BlobEventsTrigger",
 				"typeProperties": {
-					"blobPathBeginsWith": "/gold/blobs/eventtrig/Fact_Sales_1.csv",
+					"blobPathBeginsWith": "/gold/blobs/eventtrig/",
 					"ignoreEmptyBlobs": true,
 					"scope": "[parameters('eventtrigger_properties_typeProperties_scope')]",
 					"events": [
