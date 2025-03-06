@@ -82,7 +82,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "eventtriggersink",
+						"referenceName": "eventrigsource",
 						"type": "DatasetReference"
 					},
 					"enableLogging": false,
