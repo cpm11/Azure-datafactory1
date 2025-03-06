@@ -10,7 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "rejected"
+				"folderPath": "eventtrigger",
+				"fileSystem": "rejected"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
