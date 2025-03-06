@@ -11,8 +11,8 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": "Fact_Sales_1.csv",
-				"folderPath": "anshlambagit/Azure-Data-Factory/refs/heads/main/Raw Data",
-				"fileSystem": "bronze"
+				"folderPath": "eventtrig",
+				"fileSystem": "gold"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
