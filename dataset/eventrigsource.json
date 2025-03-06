@@ -10,10 +10,11 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "cars.csv",
 				"folderPath": "eventtrig",
 				"fileSystem": "gold"
 			},
-			"columnDelimiter": "",
+			"columnDelimiter": ",",
 			"escapeChar": "\\",
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
